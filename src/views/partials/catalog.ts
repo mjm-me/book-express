@@ -6,7 +6,7 @@ export function createCatalog() {
          <nav class="inline">
             <ul>
                 <li class="menu-tablet">
-                    <a href="/product/${item.id}" target="_blank">${booksCollection.book1.title}</a>
+                    <a href="/product/${book.id}" target="_blank">${booksCollection.book1.title}</a>
                     ${booksCollection.book1.author}</span>
                     ${booksCollection.book1.price}</span>
                 </li>
