@@ -9,7 +9,7 @@ import { app } from './app.js';
 
 const debug = createDebug('demo:server');
 debug('Iniciando servidor...');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const listenManager = () => {
   const addr = server.address();

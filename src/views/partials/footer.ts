@@ -40,16 +40,9 @@ export function createFooter() {
                 <span>${linksCollection.cfdsb.address[1]}</span>
                 <span>${linksCollection.cfdsb.address[2]}</span>
             </address>
+           
             <p>
-                Diseño aplicado a partir de la
-                <a href="./guide.html">Guía de Estilo</a>
-            </p>
-            <p>
-                <small
-                    >© 2024 -
-                    <a href="mailto:alce65@hotmail.es"
-                        >Alejandro Cerezo</a
-                    ></small
+                <small>© 2025 - <a href="mailto:mjm@gmail.com">mjm-me</a></small
                 >
             </p>
             <nav class="inline">

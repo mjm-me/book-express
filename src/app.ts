@@ -5,7 +5,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import {
   getIndexController,
-  getPortfolioController,
+  getProductsController,
+  getBookController,
   getAboutController,
   notFoundController,
   postController,
@@ -28,42 +29,15 @@ app.disable('x-powered-by');
 
 app.use(cors());
 
-// app.use((_req, res, next) => {
-//     debug('CORS middleware');
-//     res.setHeader('Access-Control-Allow-Origin', ['*']);
-//     res.setHeader(
-//         'Access-Control-Allow-Methods',
-//         'GET, POST, PUT, DELETE, OPTIONS',
-//     );
-//     res.setHeader(
-//         'Access-Control-Allow-Headers',
-//         'Content-Type, Authorization',
-//     );
-//     next();
-// });
-
 app.use(morgan('common'));
 app.use(express.json());
 app.use(logger('debugger'));
 app.use(express.static(publicPath));
 
-// app.use(async (req: Request, res: Response, next: NextFunction) => {
-//     if (req.url === '/favicon.ico') {
-//         const filePath = resolve(publicPath, 'favicon.ico');
-//         const buffer = await fs.readFile(filePath);
-//         res.setHeader('Content-Type', 'image/svg+xml');
-//         res.send(buffer);
-//     } else {
-//         next();
-//     }
-// });
-//
-
 app.get('/', getIndexController);
+app.get('/products', getProductsController);
+app.get('/book/:id', getBookController);
 app.get('/about', getAboutController);
-app.get('/contacts', getIndexController);
-app.post('/contacts', postController);
-app.get('/portfolio', getPortfolioController);
 
 app.use('/api/users', usersRouter);
 

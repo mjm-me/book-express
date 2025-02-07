@@ -27,11 +27,3 @@ export class UserController {
     res.send('DELETE /users/:id' + req.params.id);
   };
 }
-
-// export class UserController {
-//     readAll() {}
-//     read() {}
-//     create() {}
-//     update() {}
-//     delete() {}
-// }
