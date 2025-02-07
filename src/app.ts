@@ -28,7 +28,6 @@ app.disable('x-powered-by');
 // Middlewares
 
 app.use(cors());
-
 app.use(morgan('common'));
 app.use(express.json());
 app.use(logger('debugger'));
