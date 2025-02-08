@@ -10,7 +10,7 @@ export const renderIndexHtml = () => {
 
   return `
         <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
             ${createHead(title)}
             <body>
                 ${createHeader(pageTitle)}

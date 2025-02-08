@@ -35,7 +35,7 @@ app.use(express.static(publicPath));
 
 app.get('/', getIndexController);
 app.get('/products', getProductsController);
-app.get('/book/:id', getBookController);
+//app.get('/book/:id', getBookController);
 app.get('/about', getAboutController);
 
 app.use('/api/users', usersRouter);

@@ -1,5 +1,7 @@
 import type { Request, Response } from 'express';
 import createDebug from 'debug';
+import fs from 'fs';
+import path from 'path';
 import { renderIndexHtml } from './views/index-html.js';
 import { renderProductsHtml } from './views/products-html.js';
 //import { renderBookHtml } from './views/book-html.js';
@@ -13,16 +15,22 @@ export const getIndexController = (_req: Request, res: Response) => {
 };
 
 export const getProductsController = (_req: Request, res: Response) => {
-  const debug = createDebug('demo:getController');
+  const debug = createDebug('demo:getProductsController');
   debug('Petición recibida');
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.send(renderProductsHtml());
-};
-export const getBookController = (_req: Request, res: Response) => {
-  const debug = createDebug('demo:getController');
-  debug('Petición recibida');
-  res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.send(renderBookHtml());
+
+  // Lee el archivo books.json
+  const booksFilePath = path.join(__dirname, 'books.json');
+  fs.readFile(booksFilePath, 'utf-8', (err, data) => {
+    if (err) {
+      debug('Error al leer el archivo books.json:', err);
+      res.status(500).send('Error interno del servidor');
+      return;
+    }
+
+    const books = JSON.parse(data).books;
+    res.send(renderProductsHtml(books));
+  });
 };
 
 export const getAboutController = (_req: Request, res: Response) => {

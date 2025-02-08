@@ -1,48 +1,46 @@
 {
-    "books": [
-{
+  "books": [
+    {
       "id": 1,
       "title": "El diario naranja de Carlota",
       "author": "Lienas, Gemma",
       "editorial": "Destino Editorial",
       "topic": "Narrativa",
-      "isbn": 978-84-08-10440-7,
+      "isbn": "978-84-08-10440-7",
       "pages": "208 pág.",
       "price": 12.95,
       "image": "https://www.libreriale.es/imagenes/9788408/978840810440.GIF"
-}
-{
+    },
+    {
       "id": 2,
       "title": "Antología bilingüe",
       "author": "Blake, William",
       "editorial": "Alianza Editorial",
       "topic": "Poesía",
-      "isbn": 978-84-206-5850-6,
+      "isbn": "978-84-206-5850-6",
       "pages": "304 pág.",
-      "price": 22.30,
+      "price": 22.3,
       "image": "https://pictures.abebooks.com/inventory/31921833914.jpg"
-}
-{
+    },
+    {
       "id": 3,
       "title": "Salir al mundo",
       "author": "Calvo-Sotelo, Ibáñez",
       "editorial": "Marcial Post",
-      "isbn": 9978-84-19892-21-8,
+      "isbn": "9978-84-19892-21-8",
       "pages": "180 pág.",
-      "price": 22.00,
+      "price": 22.0,
       "image": "https://www.libreriale.es/imagenes/9788419/978841989221.GIF"
-}
-{
+    },
+    {
       "id": 4,
       "title": "Un millón de cuartos propios",
       "author": "Tenenbaum, Tamara",
       "editorial": "Paidós Ibérica",
-      "isbn": 978-84-493-4339-1,
+      "isbn": "978-84-493-4339-1",
       "pages": "289 pág.",
       "price": 17.25,
       "image": "https://www.libreriale.es/imagenes/9788449/978844934339.GIF"
+    }
+  ]
 }
-    ]
-}
-
-
